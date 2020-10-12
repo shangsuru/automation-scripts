@@ -1,5 +1,3 @@
-0;http://nowhere.com;A song to nowhere
-1;http://nowhere.com;Another great song
-2;http://nowhere.com;lalalalala
-3;http://nowhere.com;lets get some more soooongs
-4;http://nowhere.com;badumts
+0;https://www.youtube.com/watch\?v\=5yx6BWlEVcY;coffee shop radio // 24/7 lofi hip-hop beats
+1;https://www.youtube.com/watch\?v\=yUpl_HQrBnM;Chill Study Beats 5 • jazz & lofi hiphop Mix [2018]
+2;https://www.youtube.com/watch\?v\=5yx6BWlEVcY;Chillhop Radio - jazzy & lofi hip hop beats

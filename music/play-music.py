@@ -58,5 +58,4 @@ elif args.list:
         print(f"[{index}] {link} - {description}")
 
 else:
-    random = 0
-    songs.play(random)
+    songs.play()

@@ -6,18 +6,30 @@ text file and delete them.
 Opens the selected song in a new full-screen browser window.
 """
 
+from random import randint
+import webbrowser
+
 
 class MusicPlayer:
     def __init__(self, path):
         self.path = path
         self.songs = []
+
+        # Copy every song from file into songs list
         with open(path) as musicFile:
             lines = musicFile.readlines()
             for line in lines:
                 self.songs.append(tuple(line.split(";")))
 
-    def play(self, index):
-        pass
+    def play(self, index=None):
+        if not index:
+            index = randint(0, len(self.songs) - 1)
+        elif index >= len(self.songs):
+            return
+
+        songToPlay = self.songs[index]
+        url = songToPlay[1].replace("\\", "")
+        webbrowser.open_new(url)
 
     def store(self, link, description):
         index = len(self.songs)
@@ -31,7 +43,10 @@ class MusicPlayer:
 
     def remove(self, indexes):
         for index in sorted(indexes, reverse=True):
+            if index >= len(self.songs):
+                continue
             del self.songs[index]
+
         with open(self.path, "w") as musicFile:
             for newIndex, song in enumerate(self.songs):
                 link, description = song[1:]
