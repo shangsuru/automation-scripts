@@ -3,7 +3,7 @@ Can read and write songs in the format
 "[index];[link];[description]" to a specified
 text file and delete them.
 
-Opens the selected song in a new full-screen browser window.
+Opens the selected song in a new browser window.
 """
 
 from random import randint

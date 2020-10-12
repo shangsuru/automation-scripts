@@ -5,7 +5,7 @@ from player import MusicPlayer
 Text file where all songs are stored in the format
 "[index];[link];[description]"
 """
-MUSIC_FILE = "music.txt"
+MUSIC_FILE = "./music.txt"
 
 
 # ==============================
